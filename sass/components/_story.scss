@@ -8,6 +8,10 @@
   transform: skewX(-12deg);
   background-color: rgba($color-white, 0.5);
 
+  @include respond(tab-port) {
+    transform: skewX(-9deg);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -16,6 +20,15 @@
     clip-path: circle(50%);
     transform: translateY(-2.1rem) skewX(12deg);
     position: relative;
+
+    @include respond(tab-port) {
+      width: 20rem;
+      height: 20rem;
+      margin: 0rem auto 1rem auto;
+      float: none;
+      transform: translateY(-2.1rem) skewX(9deg);
+    }
+
   }
 
   &__img {
@@ -24,6 +37,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(tab-port) {
+      transform: skewX(9deg);
+    }
   }
 
   &__caption {
@@ -36,6 +53,7 @@
     text-align: center;
     opacity: 0;
     transition: all .5s;
+
   }
 
   &:hover &__caption {
