@@ -3,6 +3,10 @@
   padding: 10rem 0;
   font-size: $default-font-size;
 
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+
   &__logo-container {
     text-align: center;
   }
